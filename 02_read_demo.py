@@ -164,8 +164,8 @@ for idx, r in enumerate(sql_results, 1):
         if description != "N/A" and len(description) > 80:
             description = description[:80] + "..."
         print(f"      설명: {description}")
-        if r.payload.get("query"):
-            query_preview = r.payload.get("query", "")
+        if r.payload.get("sql"):
+            query_preview = r.payload.get("sql", "")
             if len(query_preview) > 100:
                 query_preview = query_preview[:100] + "..."
             print(f"      쿼리: {query_preview}")
